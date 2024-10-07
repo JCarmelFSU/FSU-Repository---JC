@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4958471119951069031}
   - component: {fileID: 1684815477099553753}
   - component: {fileID: 8709238518058456224}
+  - component: {fileID: -9174089503009763232}
+  - component: {fileID: -9126778594514232507}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -28,13 +30,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4804075891082042199}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0012348758, y: 0.13515118, z: 0.008919825, w: 0.9907841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.747, y: 0.6201556, z: -17.665}
   m_LocalScale: {x: 0.12516722, y: 0.17833829, z: 0.6849495}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0.002, y: 15.535, z: 1.032}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3533185593539394758
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -100,7 +102,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -118,4 +120,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81888cf06d1722e4a93b3935f7b064c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 25
+--- !u!54 &-9174089503009763232
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4804075891082042199}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-9126778594514232507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4804075891082042199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d1c27b14fb52e44db73c4ae66608628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

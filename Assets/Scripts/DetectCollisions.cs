@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowCamera : MonoBehaviour
+public class DetectCollisions : MonoBehaviour
 {
-    public GameObject player;
-    private Vector3 offset = new Vector3(0, 2, -4);
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +16,9 @@ public class FollowCamera : MonoBehaviour
         
     }
 
-    private void LateUpdate()
+    private void OnTriggerEnter(Collider other)
     {
-        transform.position = player.transform.position + offset;
+        Destroy(gameObject);
+        Destroy(other.gameObject);
     }
 }
